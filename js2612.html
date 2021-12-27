@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>OOP</title>
+   <h2>Bài tập Lập trình hướng đối tượng trong JS</h2>
+</head>
+<body>
+   <script>
+      var myBox =  function (text,attr){
+
+         //Thuoc tinh:
+         this.text = "";
+         this.attr = "";
+         
+         //Phuong thuc:
+         this.createBox = createBox;
+
+         //Xay dung phuong thuc:
+         function createBox (text,attr) {
+            result = `<div style="`;
+            result += `height:${attr[0]};`;
+            result += `width:${attr[1]};`;
+            result += `line-height:${attr[0]};`;
+            result += `text-align:center;`;
+            result += `background:black;`;
+            result += `color:white;`;
+            result += `">${text}</div>`;
+            document.write(result);
+         }
+      }
+      //var box = new myBox();
+      box.createBox("Xin chào các bạn, mình là Viễn",["100px","250px"]);
+   </script>
+</body>
+</html>
